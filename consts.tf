@@ -11,7 +11,7 @@ variable "environment" {
 
 locals {
   resource_prefix = {
-    value = "${data.aws_caller_identity.current.account_id}-${var.company_name}-${var.environment}"
+    value = "pcs-cmartinsjr-${data.aws_caller_identity.current.account_id}-${var.company_name}-${var.environment}"
   }
 }
 
