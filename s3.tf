@@ -12,6 +12,7 @@ resource "aws_s3_bucket" "data" {
     yor_trace = "ccf11b7f-e248-4980-bdb7-84ab30a83244"
     owner = "cmartinsjr_paloaltonetworks_com"
   }
+}
 resource "aws_s3_bucket_public_access_block" "data" {
   bucket = "${local.resource_prefix.value}-data"
 
@@ -19,5 +20,5 @@ resource "aws_s3_bucket_public_access_block" "data" {
   block_public_policy     = false
   ignore_public_acls      = false
   restrict_public_buckets = false
-  }
 }
+
