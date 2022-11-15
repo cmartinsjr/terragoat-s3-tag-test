@@ -20,5 +20,8 @@ resource "aws_s3_bucket_public_access_block" "data" {
   block_public_policy     = false
   ignore_public_acls      = false
   restrict_public_buckets = false
+  tags = {
+    yor_trace = "ccf11b7f-e248-4980-bdb7-84ab30a83244"
+  }
 }
 
