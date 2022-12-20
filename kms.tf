@@ -3,6 +3,9 @@ resource "aws_kms_key" "logs_key" {
   description = "${local.resource_prefix.value}-logs bucket key"
 
   deletion_window_in_days = 7
+  tags = {
+    yor_trace = "47981daf-6955-43fb-b8c2-5519c008025a"
+  }
 }
 
 resource "aws_kms_alias" "logs_key_alias" {
