@@ -8,6 +8,9 @@ resource "aws_s3_bucket" "data" {
   # bucket does not have access logs
   # bucket does not have versioning
   bucket = "${local.resource_prefix.value}-data"
+  tags = {
+    yor_trace = "f4dc83d1-e896-4c15-8a8f-318dd32ac10d"
+  }
 }
 resource "aws_s3_bucket_public_access_block" "data" {
   bucket = "${local.resource_prefix.value}-data"
